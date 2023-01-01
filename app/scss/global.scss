@@ -1,0 +1,184 @@
+@import "fonts";
+
+@mixin akrobat-100 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 100;
+}
+@mixin akrobat-200 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 200;
+}
+@mixin akrobat-300 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 300;
+}
+@mixin akrobat-400 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 400;
+}
+@mixin akrobat-500 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 500;
+}
+@mixin akrobat-600 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 600;
+}
+@mixin akrobat-700 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 700;
+}
+@mixin akrobat-800 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 800;
+}
+@mixin akrobat-900 {
+	font-family: Akrobat, sans-serif;
+	font-weight: 900;
+}
+
+html {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+body {
+	@include akrobat-400;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	background-color: #070d2d;
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+button {
+	cursor: pointer;
+	border: none;
+}
+.container {
+	max-width: 1090px;
+	padding: 0px 50px;
+	margin: 0 auto;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	bottom: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+.title {
+	@include akrobat-700;
+	font-size: 64px;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+.btn {
+	@include akrobat-700;
+	line-height: 2.0;
+	text-transform: uppercase;
+	color: #010F29;
+	padding: 15px 50px;
+	background: #FCA82D;
+	border-radius: 30.5px;
+	display: inline-block;
+	text-align: center;
+	box-shadow: 0px 11px 20px rgba(2, 2, 2, 0.261637);
+	transition: all .3s ease-in;
+	&:hover {
+		outline: 3px solid #FCA82D;
+		background: #010F29;
+		color: #fff;
+	}
+	&:active {
+		transform: translateY(3px);
+	}
+}
+.arrow-wrapper {
+	position: relative;
+		&:before {
+			position: absolute;
+			content: "";
+			height: 1px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto auto;
+			background: linear-gradient(138.91deg, #0015B1 23.29%, #C302D5 88.99%);
+		}
+		span {
+			background-color: rgba(0, 0, 0, 0.7);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 50%;
+		}
+}
+.arrow-down {
+	display: block;
+	background-color: rgba(#fff, 0.1);
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	position: relative;
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto auto;
+	}
+}
+
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 768px) {
+	.container {
+		padding: 0 30px;
+	}
+	.title {
+		font-size: 40px;
+		line-height: 0.9;
+	}
+}
+@media (max-width: 425px) {
+	.container {
+		padding: 0 20px;
+	}
+	.title {
+		font-size: 34px;
+	}
+}
+@media (max-width: 375px) {
+	.container {
+		padding: 0 15px;
+	}
+	
+}
